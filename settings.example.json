@@ -1,0 +1,4 @@
+{
+    "baseurl" : "https://mastodon.example.com",
+    "bash_prefix" : "docker exec -it mastodon_1 "
+}

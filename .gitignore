@@ -1,0 +1,9 @@
+bin
+lib
+include
+pyvenv.cfg
+*.bak.py
+*.json
+!*.example.json
+*.sh
+*.secret
