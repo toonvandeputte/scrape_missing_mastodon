@@ -1,6 +1,6 @@
 # Re-fetch missing account images
 
-On my Mastodon instance, doing `tootctl accounts refresh --all` always crashes halfway through, so I created this script to load the home timeline, check for missing account avatars, and then create the bash script necessary to fetch those images. You can then run that script on your instance.
+On my Mastodon instance, doing `tootctl accounts refresh --all` always crashes halfway through, so I created this script to load the home timeline, check for missing account avatars, and then create the bash script necessary to fetch those images for each account separately. You can then run that generated script on your instance.
 
 This whole thing was written in a few hours late at night, so it's probably not perfect. But hopefully it's useful.
 
@@ -18,7 +18,7 @@ You need a `settings.json` and `credentials.json` file. There are examples for b
 
 * `settings.json` contains the baseurl of your instance, and the prefix that should be added to each `tootctl account refresh` command. In my case this is the `docker exec` to run the command inside my docker container. But it could be anything, or an empty string.
 
-* `credentials.json` contains the credentials with which you want to log in to your Mastodon instance to access the home timeline. This can be any user, but the missing avatars detected will only be accounts visible to that user somehow.
+* `credentials.json` contains the credentials with which you want to log in to your Mastodon instance to access the home timeline. This can be any user, but the missing avatars detected will only be accounts visible to that user in some way.
 
 ### Running the script
 
