@@ -37,23 +37,23 @@ def find_avatar_links(ob):
     return out
 
 def get_all_toots():
-    try:
-        mastodon = Mastodon(
-            client_id = 'clientcred.secret',
-            api_base_url = settings['baseurl']
-        )
-    except:
-        create_app()
-        mastodon = Mastodon(
-            client_id = 'clientcred.secret',
-            api_base_url = settings['baseurl']
-        )
+    # try:
+    #     mastodon = Mastodon(
+    #         client_id = 'clientcred.secret',
+    #         api_base_url = settings['baseurl']
+    #     )
+    # except:
+    #     create_app()
+    #     mastodon = Mastodon(
+    #         client_id = 'clientcred.secret',
+    #         api_base_url = settings['baseurl']
+    #     )
 
-    mastodon.log_in(
-        credentials['login'],
-        credentials['pass'],
-        to_file = 'usercred.secret'
-    )
+    # mastodon.log_in(
+    #     credentials['login'],
+    #     credentials['pass'],
+    #     to_file = 'usercred.secret'
+    # )
 
     mastodon = Mastodon(
         access_token = 'usercred.secret',
